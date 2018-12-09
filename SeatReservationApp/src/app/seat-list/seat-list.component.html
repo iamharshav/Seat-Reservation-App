@@ -1,0 +1,64 @@
+<div class="container">
+
+  <div class="user-info">
+    <i class="fa fa-user icon"></i>
+    <input type="text" name="username" placeholder="Your Name" class="user" [(ngModel)]="user">
+
+    <i class="fa fa-ticket icon" aria-hidden="true"></i>
+    <input type="number" name="ticketnum" placeholder="No. of Tickets" class="ticket" [(ngModel)]="ticketQuantity">
+  </div>
+  <div class="booking-section">
+  <button class="confirm" (click)=enableSelectionMode()>Start Selecting</button>
+  <div class="data1">
+    <span><i class="fa fa-square reserve" aria-hidden="true"></i>Reserved</span>
+    <span><i class="fa fa-square select" aria-hidden="true"></i>Selected</span>
+    <span><button class="emptyseat"></button>Available</span>
+  </div>
+  <div class="silver">
+    <h5 class="prime1">PRIME</h5>
+    <div *ngFor="let row of primeRows">
+      <span class="rowvalue">{{row}}</span>
+
+      <span *ngFor="let col of primeCols">
+
+        <button [ngClass]="{'green':tempSelect(row+col),'red':reserve(row+col)}" class="emptyseat" (click)=fnSelectSeat(row+col)
+          [disabled]=selectionMode>{{col}}</button>
+
+
+      </span>
+    </div>
+  </div>
+  <div class="silver">
+    <h5 class="prime1">SILVER</h5>
+    <div *ngFor="let row of silverRows">
+      <span class="rowvalue">{{row}}</span>
+
+      <span *ngFor="let col of silverCols">
+
+        <button [ngClass]="{'green':tempSelect(row+col),'red':reserve(row+col)}" class="emptyseat" (click)=fnSelectSeat(row+col)
+          [disabled]=selectionMode>{{col}}</button>
+
+
+      </span>
+    </div>
+  </div>
+  <p class="font1">SCREEN THIS WAY</p>
+  <div class="screen"></div>
+  <button class="confirm" (click)=confirmSeat();disableSelectionMode()>Confirm</button>
+</div>
+  <div class="table">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>No. of tickets</th>
+        <th>Seats</th>
+      </tr>
+      <tr *ngFor="let user of userList">
+        <td>{{user.name}}</td>
+        <td>{{user.seatQuantity}}</td>
+        <td>{{user.tickets}}</td>
+      </tr>
+    </table>
+
+  </div>
+</div>

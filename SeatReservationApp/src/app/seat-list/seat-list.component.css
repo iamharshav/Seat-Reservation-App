@@ -1,0 +1,167 @@
+
+.container{
+    width:90%;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+.fa-square:before,.fa-square-o:before{
+    font-size: 28px;
+    margin: 10px;
+}
+
+.user-info{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+}
+.booking-section{
+    padding: 20px 0;
+    background:#fff;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+    border-radius: 0 0 5px 5px;
+}
+.screen{
+    background: hsla(216, 72%, 50%, 0.65);
+    height: 3px;
+    border-radius: 15px;
+    margin: 0px 150px 10px;
+   
+}
+.font1{
+    font-size: 11px;
+    margin: 20px 0 10px;
+}
+.user, .ticket{
+   
+    width: 200px;
+    height: 30px;
+    border: 1px solid #3399ff;
+    border-radius: 0px 5px 5px 0;
+    padding-left: 10px;
+}
+
+
+.icon {
+    padding: 9px 0;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+    margin: 0 0px 0 40px;
+    border-radius: 5px 0px 0 5px;
+    vertical-align: middle;
+  }
+  .select{
+      color: green;
+      vertical-align: middle;
+  }
+  .reserve{
+    color: red;
+    vertical-align: middle;
+}
+.icon1{
+    vertical-align: middle;
+}
+.data1{
+    margin-top: 20px;
+}
+.confirm{
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    padding: 10px 20px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    border: 1px solid #17a2b8;
+    border-radius: 5px;
+    font-weight: 400;
+    font-family: verdana;
+    cursor: pointer;
+}
+.confirm:focus{
+    border: none;
+}
+.confirm:hover{
+    color: #fff;
+    background-color: #138496;
+    border-color: #117a8b;
+}
+.prime1{
+    display: inline-block;
+    background: #f0eff7;
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+.green{
+   
+    background: green;
+}
+.red{
+    background: red;
+    pointer-events: none;
+    border: 1px solid red;
+}
+.rowvalue{
+    padding: 10px;
+}
+.emptyseat{
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin: 10px;
+    vertical-align: middle;
+    padding: 0;
+    color: #000;
+    font-family: verdana;
+}
+button:focus,input:focus{
+    outline: none;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: .2rem;
+    border: solid #f8f9fa;
+    margin: 1rem 0px 0;
+}
+th{
+    color: #fff;
+    background-color: #212529;
+    border-color: #32383e;
+    padding: 10px;
+}
+td,th{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+@media(max-width:560px){
+    .emptyseat{
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+    border: 1px solid #000;
+    }
+    .user-info{
+        margin: 0 auto;
+    }
+    .icon{
+        margin: 0;
+    }
+    .ticket{
+        margin-top: 15px;
+    }
+    .screen{
+        margin: 0px 20px 10px;
+    }
+    .fa-square:before,.fa-square-o:before{
+        font-size: 20px;
+    }
+}
